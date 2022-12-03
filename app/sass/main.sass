@@ -1,0 +1,94 @@
+@import base
+
+.header
+	padding: 10px 0
+
+	&__container
+		+between
+		width: 900px
+		margin: 0 auto
+		padding: 0 15px
+
+	&__info
+		display: flex
+		align-items: center
+
+	&__link
+		position: relative
+		color: #000
+		font-weight: 600
+		font-size: 15px
+		text-decoration: none
+		margin-right: 30px
+		display: flex
+
+		&:hover
+			color: $accent
+
+			&::before
+				width: 100%
+
+			&::after
+				border-left: 1px solid $accent
+				border-bottom: 1px solid $accent
+
+		&:active
+			color: #FAA500
+
+			&::after
+				border-left: 1px solid #FAA500
+				border-bottom: 1px solid #FAA500
+
+		&::after
+			content: ''
+			display: block
+			height: 8px
+			width: 8px
+			border-left: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(-45deg)
+			margin-left: 8px
+			transition: all .6s
+
+		&::before
+			content: ''
+			background: $accent
+			width: 0
+			height: 1px
+			position: absolute
+			bottom: 0
+			transition: all .6s
+	&__btn
+		position: relative
+		color: #fff
+		text-decoration: none
+		padding: 8px 15px
+		border-radius: 35px
+		overflow: hidden
+
+		&:hover
+			color: #fff
+
+			&::after
+				width: 200%
+
+		&:active
+			bottom: -1px
+			right: -1px
+
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			background: linear-gradient(90deg, #FF5E67 0%, #FAA500 96.6%)
+			z-index: -1
+			+transition
+
+
+
+
+
