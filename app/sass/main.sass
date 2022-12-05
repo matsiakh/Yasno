@@ -15,6 +15,7 @@
 
 	&__link
 		position: relative
+		padding-right: 15px
 		color: #000
 		font-weight: 600
 		font-size: 15px
@@ -39,17 +40,6 @@
 				border-left: 1px solid #FAA500
 				border-bottom: 1px solid #FAA500
 
-		&::after
-			content: ''
-			display: block
-			height: 8px
-			width: 8px
-			border-left: 1px solid #000
-			border-bottom: 1px solid #000
-			transform: rotate(-45deg)
-			margin-left: 8px
-			transition: all .6s
-
 		&::before
 			content: ''
 			background: $accent
@@ -58,6 +48,20 @@
 			position: absolute
 			bottom: 0
 			transition: all .6s
+
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 5px
+			display: block
+			height: 8px
+			width: 8px
+			border-left: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(-45deg)
+			transition: all .6s
+
 	&__btn
 		position: relative
 		color: #fff
@@ -87,6 +91,24 @@
 			background: linear-gradient(90deg, #FF5E67 0%, #FAA500 96.6%)
 			z-index: -1
 			+transition
+
+.hero
+	background-image: url(../images/dist/hero.png)
+	background-repeat: no-repeat
+	background-position: center
+	padding: 90px 0
+
+	&__container
+		position: relative
+		width: 900px
+		margin: 0 auto
+		padding: 0 15px
+
+	&__title
+		font-weight: 800
+		font-size: 70px
+		text-align: center
+
 
 
 
