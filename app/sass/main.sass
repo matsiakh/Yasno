@@ -4,6 +4,7 @@
 	width: 900px
 	margin: 0 auto
 	padding: 0 15px
+	box-sizing: b
 
 	+r(900)
 		width: 767px
@@ -197,18 +198,33 @@
 
 	&__wrap
 		display: flex
+		justify-content: space-between
 		flex-wrap: wrap
-		gap: 30px
+		gap: 30px 3.3%
 
 	&__item
 		position: relative
+		display: block
+		width: 31%
+
+		&:first-child
+			width: 65.1%
+
+		&:last-child
+			width: 65.1%
+
+		img
+			width: 100%
+			min-height: 100%
+			display: block
 
 		&_block
 			position: absolute
 			padding: 30px 35px
 			top: 0
 			left: 0
-			width: 100%
+			right: 0
+
 
 		h3
 			font-size: 35px
@@ -221,5 +237,16 @@
 			color: #fff
 			line-height: 1.25
 			
+		&_desk
+
+			+r(767)
+				display: none
+
+		&_mob
+			display: none !important
+
+			+r(767)
+				display: block
+
 
 
