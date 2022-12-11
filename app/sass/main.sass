@@ -4,7 +4,6 @@
 	width: 900px
 	margin: 0 auto
 	padding: 0 15px
-	box-sizing: b
 
 	+r(900)
 		width: 767px
@@ -91,6 +90,9 @@
 		font-weight: 600
 		height: 35px
 
+		+r(480)
+			font-size: 14px
+
 		&:hover
 			color: #fff
 
@@ -120,8 +122,11 @@
 	background-size: initial
 	padding: 140px 0 90px
 
-	+r(767)
+	+r(900)
 		padding: 55px 0
+
+	+r(767)
+		background-size: contain
 
 	&__container
 		position: relative
@@ -141,7 +146,7 @@
 .about
 	padding: 60px 0
 
-	+r(767)
+	+r(900)
 		padding: 30px 0
 
 	&__container
@@ -186,15 +191,16 @@
 			display: none
 
 .case
-
 	&__title
 		font-size: 35px
 		font-weight: 800
 		margin-bottom: 40px
 
+		+r(900)
+			margin-bottom: 20px
+
 		+r(767)
 			font-size: 27px
-			margin-bottom: 20px
 
 	&__wrap
 		display: flex
@@ -202,21 +208,36 @@
 		flex-wrap: wrap
 		gap: 30px 3.3%
 
+		+r(900)
+			gap: 15px 3.3%
+
+		+r(767)
+			justify-content: center
+
 	&__item
 		position: relative
 		display: block
 		width: 31%
 
-		&:first-child
-			width: 65.1%
+		+r(767)
+			width: 48%
+			
+		+r(576)
+			min-width: 315px
 
+		+r(345)
+			min-width: 100%
+
+		&:first-child,
 		&:last-child
 			width: 65.1%
+
+			+r(767)
+				width: 48%
 
 		img
 			width: 100%
 			min-height: 100%
-			display: block
 
 		&_block
 			position: absolute
@@ -225,6 +246,14 @@
 			left: 0
 			right: 0
 
+			+r(900)
+				padding: 15px 20px
+
+			+r(576)
+				padding: 30px 40px
+
+			+r(345)
+				padding: 20px 30px
 
 		h3
 			font-size: 35px
@@ -232,18 +261,31 @@
 			color: #fff
 			margin-bottom: 15px
 
+			+r(900)
+				font-size: 30px
+
+			+r(767)
+				font-size: 27px
+				margin-bottom: 10px
+
 		p
 			font-size: 19px
 			color: #fff
 			line-height: 1.25
+
+			+r(900)
+				font-size: 17px
+
+		br
+			+r(767)
+				display: none
 			
 		&_desk
-
 			+r(767)
 				display: none
 
 		&_mob
-			display: none !important
+			display: none
 
 			+r(767)
 				display: block
