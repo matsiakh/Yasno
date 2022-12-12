@@ -291,4 +291,72 @@
 				display: block
 
 
+.add
+	padding: 30px 0 80px
 
+	&__container
+		display: flex
+		gap: 6.6%
+		align-items: center
+
+	&__form
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+		width: 31%
+		height: 560px
+		background-image: url(../images/dist/add__form.png)
+		background-size: contain
+		background-repeat: no-repeat
+
+		+r(767)
+			width: 48%
+
+		p
+			width: 100%
+			font-weight: 600
+			font-size: 20px
+
+		&_plus
+			width: 40px
+			height: 40px
+			background-color: #000
+			border-radius: 50%
+			position: relative
+			margin: 0 auto 15px
+
+			&::before,
+			&::after
+				content: ''
+				display: block
+				height: 2px
+				width: 18px
+				background-color: #fff
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+			
+			&::before
+				transform: translate(-50%, -50%) rotate(90deg)
+
+	&__desk
+		width: 61.8%
+
+		+r(767)
+		width: 48%
+
+	&__title
+		font-weight: 800
+		font-size: 47px
+		line-height: 1.1
+		margin-bottom: 30px
+
+		+r(767)
+			font-size: 27px
+
+	&__text
+		font-weight: 400
+		font-size: 21px
+		line-height: 1.25
