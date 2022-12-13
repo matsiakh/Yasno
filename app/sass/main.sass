@@ -177,7 +177,7 @@
 	h3
 		margin-bottom: 30px
 		font-size: 25px
-		line-height: 1.3
+		line-height: 1.2
 
 		+r(767)
 			margin-bottom: 15px
@@ -299,6 +299,9 @@
 		gap: 6.6%
 		align-items: center
 
+		+r(576)
+			flex-wrap: wrap-reverse
+
 	&__form
 		display: flex
 		align-items: center
@@ -310,13 +313,26 @@
 		background-size: contain
 		background-repeat: no-repeat
 
+		+r(900)
+			height: 470px
+
 		+r(767)
-			width: 48%
+			width: 30%
+			height: 350px
+
+		+r(576)
+			width: 315px
+			height: 140px
+			background-image: url(../images/dist/add__form_mob.png)
+			margin: 0 auto
 
 		p
 			width: 100%
 			font-weight: 600
 			font-size: 20px
+
+			+r(767)
+				font-size: 18px
 
 		&_plus
 			width: 40px
@@ -325,6 +341,10 @@
 			border-radius: 50%
 			position: relative
 			margin: 0 auto 15px
+
+			+r(767)
+				width: 30px
+				height: 30px
 
 			&::before,
 			&::after
@@ -337,7 +357,10 @@
 				left: 50%
 				top: 50%
 				transform: translate(-50%, -50%)
-			
+
+				+r(767)
+					width: 15px
+
 			&::before
 				transform: translate(-50%, -50%) rotate(90deg)
 
@@ -345,7 +368,12 @@
 		width: 61.8%
 
 		+r(767)
-		width: 48%
+			width: 63.4%
+
+		+r(576)
+			width: 100%
+			text-align: center
+			margin-bottom: 25px
 
 	&__title
 		font-weight: 800
@@ -354,9 +382,28 @@
 		margin-bottom: 30px
 
 		+r(767)
+			font-size: 32px
+			margin-bottom: 15px
+
+		+r(576)
 			font-size: 27px
+			line-height: 1.3
 
 	&__text
 		font-weight: 400
 		font-size: 21px
 		line-height: 1.25
+
+		+r(767)
+			font-size: 18px
+
+		+r(576)
+			font-size: 15px
+			line-height: 1.35
+
+		br
+			+r(767)
+				display: none
+
+			+r(576)
+				display: block
