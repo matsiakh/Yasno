@@ -290,7 +290,6 @@
 			+r(767)
 				display: block
 
-
 .add
 	padding: 30px 0 80px
 
@@ -407,3 +406,53 @@
 
 			+r(576)
 				display: block
+
+.blog
+	padding: 80px 0
+	background: linear-gradient(284.04deg, #F8EBFF 15.28%, #FFECEC 73.78%)
+
+	&__container
+		display: flex
+		gap: 6.6%
+		align-items: center
+
+	&__insayt
+		width: 31%
+
+	&__title
+		font-weight: 800
+		font-size: 45px
+		line-height: 1.1
+		margin-bottom: 30px
+
+	&__link
+		font-weight: 600
+		font-size: 19px
+		line-height: 1.4
+		color: #000
+		text-decoration: none
+		position: relative
+		padding-right: 15px
+		@extend .header__link
+		display: inline
+
+		&:hover
+			&::after
+				border-left: 2px solid $accent
+				border-bottom: 2px solid $accent
+
+		&:active
+			&::after
+				border-left: 2px solid #FAA500
+				border-bottom: 2px solid #FAA500
+
+		&::after
+			border-left: 2px solid #000
+			border-bottom: 2px solid #000
+			transform: rotate(-135deg)
+			top: 8px
+			height: 9px
+			width: 9px
+
+	&__product
+		width: 49%
