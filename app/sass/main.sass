@@ -455,4 +455,63 @@
 			width: 9px
 
 	&__product
-		width: 49%
+		width: 48%
+		background-color: #fff
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15)
+		border-radius: 3px
+
+		&_img
+			width: 100%
+			position: relative
+			overflow: hidden
+			padding-top: 48%
+
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				min-height: 100%
+				max-width: 100%
+
+		p
+			font-size: 19px
+			line-height: 1.25
+			margin-bottom: 15px
+
+		&_block
+			padding: 15px 30px 30px
+			border: 1px solid rgba(0, 0, 0, 0.1)
+			border-top: 0
+
+		&_list
+			display: flex
+			flex-wrap: wrap
+			gap: 8px
+
+		&_link
+			position: relative
+			background-color: #000
+			border-radius: 33px
+			padding: 3px 8px
+			text-decoration: none
+			color: #fff
+			font-weight: 600
+			font-size: 15px
+			line-height: 1.2
+
+			&:hover
+				background-color: $accent
+				color: #fff
+
+			&:active
+				bottom: -1px
+				right: -1px
+
+.video
+	padding-top: 40px
+	padding-bottom: 50px
+
+	iframe
+		width: 100%
+		height: 420px
