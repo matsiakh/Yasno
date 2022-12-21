@@ -17,6 +17,7 @@
 .title
 	font-size: 35px
 	font-weight: 800
+	line-height: 1.2
 
 	+r(767)
 			font-size: 27px
@@ -415,8 +416,10 @@
 
 	&__container
 		display: flex
+		flex-wrap: wrap
 		gap: 6.6%
 		align-items: center
+		justify-content: center
 
 	&__insayt
 		width: 31%
@@ -424,10 +427,19 @@
 		+r(900)
 			width: 40%
 
+		+r(767)
+			width: 100%
+			max-width: 400px
+			margin-bottom: 30px
+
 	&__title
 		font-size: 45px
 		line-height: 1.1
 		margin-bottom: 30px
+
+		+r(767)
+			font-size: 27px
+			margin-bottom: 10px
 
 		br
 			+r(900)
@@ -443,6 +455,10 @@
 		padding-right: 15px
 		@extend .header__link
 		display: inline
+
+		+r(767)
+			font-size: 15px
+			padding-right: 10px
 
 		&:hover
 			&::after
@@ -462,6 +478,10 @@
 			height: 9px
 			width: 9px
 
+			+r(767)
+				height: 6px
+				width: 6px
+
 	&__product
 		width: 48%
 		background-color: #fff
@@ -469,7 +489,11 @@
 		border-radius: 3px
 
 		+r(900)
-			width: 54.4%
+			width: 53%
+
+		+r(767)
+			width: 100%
+			max-width: 400px
 
 		&_img
 			display: block
@@ -500,6 +524,10 @@
 			line-height: 1.25
 			margin-bottom: 15px
 
+			+r(767)
+				font-size: 15px
+				margin-bottom: 10px
+
 			a
 				color: #000
 				text-decoration: none
@@ -515,10 +543,16 @@
 			border: 1px solid rgba(0, 0, 0, 0.1)
 			border-top: 0
 
+			+r(767)
+				padding: 15px
+
 		&_list
 			display: flex
 			flex-wrap: wrap
 			gap: 8px
+
+			+r(767)
+				gap: 5px
 
 		&_link
 			position: relative
@@ -530,6 +564,9 @@
 			font-weight: 600
 			font-size: 15px
 			line-height: 1.2
+
+			+r(767)
+				font-size: 12px
 
 			&:hover
 				background-color: $accent
@@ -551,13 +588,27 @@
 	padding-top: 90px
 	padding-bottom: 40px
 
-	&__block
+	+r(900)
+		padding-bottom: 20px
+		padding-top: 60px
+
+	+r(767)
+		padding-bottom: 20px
+		padding-top: 40px
+
+	&__container
 		display: flex
 		text-align: center
 		gap: 6.6%
+		overflow: auto
+
+		+r(767)
+			text-align: left
+			padding-bottom: 15px
 
 	&__item
 		width: 31%
+		min-width: 240px
 
 		img
 			margin-bottom: 20px
