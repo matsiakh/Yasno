@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				})
 			}
 		}
-		constpopupCloseIcon = document.querySelectorAll('close-popup');
+		const popupCloseIcon = document.querySelectorAll('close-popup');
 		if (popupCloseIcon.length > 0) {
 			for (let index = 0; index < popupCloseIcon.length; index++) {
 				const el = popupCloseIcon[index];
