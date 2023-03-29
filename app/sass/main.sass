@@ -137,53 +137,53 @@
 			z-index: -1
 			+transition
 
-.popup
-	position: fixed
-	width: 100%
-	height: 100%
-	background-color: rgba(0, 0, 0, 0.8)
-	top: 0
-	left: 0
-	opacity: 0
-	visibility: hidden
-	overflow-y: auto
-	overflow-x: hidden
-	transition: all 0.8s ease 0s
+// .popup
+// 	position: fixed
+// 	width: 100%
+// 	height: 100%
+// 	background-color: rgba(0, 0, 0, 0.8)
+// 	top: 0
+// 	left: 0
+// 	opacity: 0
+// 	visibility: hidden
+// 	overflow-y: auto
+// 	overflow-x: hidden
+// 	transition: all 0.8s ease 0s
+// 	z-index: 10000
 
-	&__body
-		min-height: 100%
-		display: flex
-		align-items: center
-		justify-content: center
-		padding: 30px 10px
+// 	&__body
+// 		min-height: 100%
+// 		display: flex
+// 		align-items: center
+// 		justify-content: center
+// 		padding: 30px 10px
 
-	&__content
-		background-color: #fff
-		color: #000
-		min-width: 800px
-		padding: 30px
-		position: relative
+// 	&__content
+// 		background-color: #fff
+// 		color: #000
+// 		min-width: 800px
+// 		padding: 30px
+// 		position: relative
 
-	&__close
-		position: absolute
-		right: 10px
-		top: 10px
-		font-size: 20px
-		color: #000
-		text-decoration: none
+// 	&__close
+// 		position: absolute
+// 		right: 10px
+// 		top: 10px
+// 		font-size: 20px
+// 		color: #000
+// 		text-decoration: none
 
-	&__title
-		font-size: 40px
-		margin-bottom: 1em
+// 	&__title
+// 		font-size: 40px
+// 		margin-bottom: 1em
 
-.popup.open
-	opacity: 1
-	visibility: visible
+// .popup.open
+// 	opacity: 1
+// 	visibility: visible
 
-.popup.open .popup__content
-	transform: perspective(600px) translate(0px, 0%) rotateX(0deg)
-	opacity: 1
-
+// .popup.open .popup__content
+// 	transform: perspective(600px) translate(0px, 0%) rotateX(0deg)
+// 	opacity: 1
 
 .hero
 	background-image: url(../images/dist/hero.png)
@@ -924,14 +924,182 @@
 				svg, path
 					fill: $active
 
-
 .active
 	background: #000
 
 
 
+// -----MODAL-----
+.modal
+	display: flex
+	visibility: hidden
+	opacity: 0
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	min-width: 100vw
+	min-height: 100vh
+	padding: 30px
+	z-index: 10000
+	background-color: rgba(#1a1a1d, .7)
+	overflow: auto
+	padding: 40px 0
+	+transition
+
+	&.active
+		opacity: 1
+		visibility: visible
+
+		.modal__form
+			transform: translate(0, 0)
+			opacity: 1
+
+	&__close
+		position: absolute
+		right: 0
+		top: -40px
+		display: block
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		border: none
+		cursor: pointer
+		transition: all .6s
+		background-color: transparent
+
+		+r(576)
+			width: 30px
+			height: 30px
+
+		&:hover
+			outline: none
+			transform: rotate(90deg)
+
+			span
+				background: $accent
+
+		span
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			background: #fff
+			transition: all .6s
+			border-radius: 4px
+			height: 22px
+			width: 3px
+
+			&:first-child
+				transform: translate(-50%, -50%) rotate(45deg)
+
+			&:last-child
+				transform: translate(-50%, -50%) rotate(-45deg)
+
+	&__form
+		z-index: 1
+		background-color: #fff
+		box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
+		width: 100%
+		max-width: 500px
+		height: auto
+		padding: 50px
+		border: 1px solid #8d8d8e
+		margin: auto
+		transform: translate(0, -150px)
+		+transition
+
+		&::after
+			border-radius: 20px
+
+		+r(992)
+			max-width: 90vw
+			padding: 40px
+		
+		+r(576)
+			padding: 25px
+
+	h3
+		text-transform: none
+		font-size: 1.3em
+		margin-bottom: 20px
+		text-align: center
+		font-weight: 600
 
 
 
+//---------------SASS-------------
+.accordion
+	padding: 20px 0
+	margin-bottom: 10px
+	border-bottom: 1px solid #161B21
 
+	&:last-child
+		margin-bottom: 0
 
+	&__header
+		+transition
+		display: flex
+		align-items: center
+		justify-content: space-between
+		cursor: pointer
+		font-weight: 700
+
+		span
+			+transition
+			position: relative
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			border: 1px solid $black
+
+			&::before,
+			&::after
+				+transition
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				background-color: $black
+
+			&::before
+				width: 10px
+				height: 1px
+			
+			&::after
+				height: 10px
+				width: 1px
+
+	&__content
+		+transition
+		overflow: hidden
+		color: #b5acac
+		padding-left: 40px
+		height: 0
+
+		+r(1200)
+			padding-left: 20px
+
+		+r(767)
+			padding-left: 10px
+
+	&--active
+
+		.accordion
+			&__header
+				margin-bottom: 20px
+
+				span
+					background-color: $accent
+					border-color: $accent
+
+					&::before
+						background-color: #ffffff
+
+					&::after
+						background-color: transparent
+
+			&__content
+				opacity: 1

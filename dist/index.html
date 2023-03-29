@@ -26,16 +26,16 @@
 	
 				<div class="header__info">
 					<a href="#" class="header__link">Загляните сюда</a>
-					<a href="#popup" class="header__btn popup-link">Получить консультацию</a>
+					<a href="#popup" class="header__btn modal__next">Получить консультацию</a>
 				</div>
 	
 			</div>
 		</header>
 	
-		<section id="popup" class="popup">
+		<!-- <section id="popup" class="popup">
 			<div class="popup__body">
 				<div class="popup__content">
-					<a href="#header" class="popup__close close-popup">X</a>
+					<a href="#" class="popup__close close-popup">X</a>
 					<div class="popup__title">Модальне вікно</div>
 					<div class="popup__text">
 						<a href="#popup_2" class="popup-link">LL</a>
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 	</div>
 
 	<section class="hero">
@@ -241,11 +241,11 @@
 		</div>
 	</section>
 
-	<section class="video">
+	<!-- <section class="video">
 		<div class="video__container container">
 			<iframe width="956" height="538" src="https://www.youtube.com/embed/lSIapge-UsM" title="Современный, нежный, веселый и современный джаз работать с современным джазовым саксофоном" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="section">
 		<div class="container">
@@ -379,6 +379,147 @@
 
 		</div>
 	</footer>
+
+	<div class="modal" id="modal__next">
+		<form action="#" class="modal__form form" method="POST">
+	
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+	
+				<h3 class="form__title">Добавить елемент в слайдер</h3>
+	
+				<input type="hidden" name="subject" value="Добавить елемент в слайдер">
+	
+				<div class="form__item">
+					<label for="formName" class="form__label">Имя*</label>
+					<input id="formName" type="text" name="name" placeholder="Имя" class="form__input _req">
+				</div>
+	
+				<div class="form__item">
+					<label for="formPhone" class="form__label">Телефон*</label>
+					<input id="formPhone" type="tel" name="phone" placeholder="Телефон" class="form__input _req">
+				</div>
+	
+				<div class="form__item">
+					<label for="formMail">Почта*</label>
+					<input id="formMail" type="email" name="mail" placeholder="Почта" class="form__input _req">
+				</div> 
+	
+				<div class="form__item">
+					<div class="form__label">Левша или правша?</div>
+					<div class="form__options">
+						<div class="form__options_item">
+							<input id="formRigth" type="radio" value="raight" name="hand" class="form__options_input" checked>
+							<label for="formRigth" class="form__options_label"><span>Правша</span></label>
+						</div>
+						<div class="form__options_item">
+							<input id="formLeft" type="radio" value="left" name="hand" class="form__options_input">
+							<label for="formLeft" class="form__options_label"><span>Левша</span></label>
+						</div>
+					</div>
+				</div>
+	
+				<div class="form__item">
+					<label for="formMessage" class="form__label">Сообщение</label>
+					<textarea name="message" id="formMessage" class="form__textarea"></textarea>
+				</div>
+	
+				<div class="form__item">
+					<div class="form__label">Возраст:</div>
+					<select name="age" id="formAge" class="form__select">
+						<option value="18" selected="selected">18</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+						<option value="50">50</option>
+					</select>
+				</div>
+	
+				<div class="form__item">
+					<div class="form__label">Прикрепить фото:</div>
+					<div class="form__file">
+						<div class="form__file_item">
+							<input id="formImage" accept=".jpg, .png, .gif, .ico" type="file" name="image" class="form__file_input">
+							<label for="formImage" class="form__file_button btn">Выбрать</label>
+						</div>
+						<div id="formPreview" class="form__file_preview"></div>
+					</div>
+				</div>
+	
+				<div class="form__item">
+					<div class="form__checkbox">
+						<input id="formAgreement" checked type="checkbox" name="agreement" class="form__checkbox_input _req">
+						<label for="formAgreement" class="form__checkbox_label"><span>Персональные данные <a href="#">Файл</a></span></label>
+					</div>
+				</div>
+	
+				<div class="form__btn">
+					<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+				</div>
+	
+		</form>
+	</div>
+	
+	<div class="modal" id="modal__thanks">
+		<div class="modal__form modal__thanks">
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+	
+			<h3>Спасибо за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+	</div>
+
+<div class="accordion">
+	<div class="accordion__header">
+		<p>Заголовок клик</p>
+		<span></span>
+	</div>
+	<div class="accordion__content">
+		<p>
+			Контент
+		</p>
+	</div>
+</div>
+
+<div class="accordion">
+	<div class="accordion__header">
+		<p>Заголовок клик</p>
+		<span></span>
+	</div>
+	<div class="accordion__content">
+		<p>
+			Контент
+		</p>
+	</div>
+</div>
+
+<div class="accordion">
+	<div class="accordion__header">
+		<p>Заголовок клик</p>
+		<span></span>
+	</div>
+	<div class="accordion__content">
+		<p>
+			Контент
+		</p>
+	</div>
+</div>
+
+<div class="accordion">
+	<div class="accordion__header">
+		<p>Заголовок клик</p>
+		<span></span>
+	</div>
+	<div class="accordion__content">
+		<p>
+			Контент
+		</p>
+	</div>
+</div>
 
 </body>
 </html>
