@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				} else {
 					header.classList.remove(active);
 				}
-	
+
 			});
-	
+
 		};
 		headerFixed('.header', '.header--active');
 
@@ -131,16 +131,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		};
 		accordions('.accordion');
-	
+
 	//------------------------------ACCORDIONS---------------------------
 		var swiper = new Swiper(".mySwiper", {
 			slidesPerView: 3,
 			spaceBetween: 30,
-			freeMode: true,
+			freeMode: false,
+			loop: true,
 			pagination: {
 				el: ".swiper-pagination",
 				clickable: true,
 			},
+			navigation: {
+				nextEl: '.question__next',
+				prevEl: '.question__prev',
+			},
+
 		});
 
 });
