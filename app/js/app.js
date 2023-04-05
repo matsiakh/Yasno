@@ -101,41 +101,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		modals('.modal');
 
-	//------------------------------ACCORDIONS---------------------------
-		const accordions = (accordionSelector) => {
-			const	accordion = document.querySelectorAll(accordionSelector);
-
-			accordion.forEach(item => {
-				const accordionClick = item.querySelector('.accordion__header'),
-							accordionContent = item.querySelector('.accordion__content');
-
-				accordionClick.addEventListener('click', (e) => {
-					if(!item.classList.contains('accordion--active')) {
-
-						item.classList.add('accordion--active')
-						accordionContent.style.height = "auto"
-						var height = accordionContent.clientHeight + "px"
-						accordionContent.style.height = "0px"
-
-						setTimeout(() => {
-							accordionContent.style.height = height
-						}, 0)
-
-						} else {
-							accordionContent.style.height = "0px"
-								item.classList.remove('accordion--active')
-					}
-
-				});
-			});
-
-		};
-		accordions('.accordion');
-
-	//------------------------------ACCORDIONS---------------------------
+	//------------------------------SLIDER---------------------------
 		var swiper = new Swiper(".mySwiper", {
-			slidesPerView: 3,
-			spaceBetween: 30,
 			freeMode: false,
 			loop: true,
 			pagination: {
@@ -146,8 +113,25 @@ document.addEventListener("DOMContentLoaded", function() {
 				nextEl: '.question__next',
 				prevEl: '.question__prev',
 			},
-
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 15
+				},
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 30
+				},
+				900: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				}
+			},
 		});
 
+//------------------------------GALLERY---------------------------
+		Fancybox.bind("[data-fancybox]", {
+			// Your custom options
+		});
 });
 	
