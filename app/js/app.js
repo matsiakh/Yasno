@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			},
 		});
 
-//------------------------------GALLERY---------------------------
-		Fancybox.bind("[data-fancybox]", {
-			// Your custom options
-		});
+	//------------------------------GALLERY---------------------------
+	Fancybox.bind('[data-fancybox="gallery"]', {
+		hideScrollbar: false,
+	});
 });
 	

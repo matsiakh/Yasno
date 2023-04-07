@@ -41,7 +41,7 @@ function browsersync() {
 }
 
 function scripts() {
-	return src(['app/js/*.js', '!app/js/*.min.js'])
+	return src(['app/js/*.js', '!app/js/*.min.js', 'node_modules/swiper/swiper-bundle.js', 'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',])
 		.pipe(webpackStream({
 			mode: 'production',
 			performance: { hints: false },
@@ -72,7 +72,7 @@ function scripts() {
 }
 
 function styles() {
-	return src([`app/${preprocessor}/*.*`, `!app/${preprocessor}/_*.*`])
+	return src([`app/${preprocessor}/*.*`, `!app/${preprocessor}/_*.*`, `node_modules/swiper/swiper-bundle.css`, `node_modules/@fancyapps/ui/dist/fancybox/fancybox.css`,])
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)({ 'include css': true }))
 		.pipe(postCss([
