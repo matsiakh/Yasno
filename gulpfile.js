@@ -42,30 +42,6 @@ function browsersync() {
 
 function scripts() {
 	return src(['app/js/*.js', '!app/js/*.min.js', 'node_modules/swiper/swiper-bundle.js', 'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',])
-		.pipe(webpackStream({
-			mode: 'production',
-			performance: { hints: false },
-			plugins: [
-				new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
-			],
-			module: {
-				rules: [
-					{
-						test: /\.m?js$/,
-						exclude: /(node_modules)/,
-						use: {
-							loader: 'babel-loader',
-							options: {
-								presets: ['@babel/preset-env'],
-								plugins: ['babel-plugin-root-import']
-							}
-						}
-					}
-				]
-			},
-		}, webpack)).on('error', (err) => {
-			this.emit('end')
-		})
 		.pipe(concat('app.min.js'))
 		.pipe(dest('app/js'))
 		.pipe(browserSync.stream())

@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 
 	//------------------------------GALLERY---------------------------
-	Fancybox.bind('[data-fancybox="gallery"]', {
-		hideScrollbar: false,
+	Fancybox.bind('[data-fancybox]', {
+		// Your custom options
 	});
 });
 	

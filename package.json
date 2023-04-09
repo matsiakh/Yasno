@@ -44,6 +44,7 @@
 	},
 	"dependencies": {
 		"@fancyapps/ui": "^5.0.15",
+		"jquery": "^3.6.4",
 		"swiper": "^9.2.0"
 	}
 }
