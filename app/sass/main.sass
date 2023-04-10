@@ -612,8 +612,35 @@
 		+r(400)
 			height: 190px
 
+.tabs
+	padding: 50px 0
+
+	&__active
+		font-weight: 700
+
+		.tabs__item_remove
+			display: none
+
+		.tabs__item_active
+			display: block
+
+	&__list
+		display: flex
+		justify-content: space-between
+		gap: 3%
+
+	&__item
+		width: 17%
+		font-size: 19px
+
+		&_active
+			display: none
+
+		img
+			margin-bottom: 15px
+
 .design
-	padding-top: 90px
+	padding-top: 50px
 	padding-bottom: 40px
 
 	+r(900)
@@ -948,11 +975,6 @@
 			&:active
 				svg, path
 					fill: $active
-
-.active
-	background: #000
-
-
 
 // -----MODAL-----
 .modal
