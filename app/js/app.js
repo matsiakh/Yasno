@@ -298,5 +298,28 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		};
 		forms('.form');
+
+
+		const header = document.querySelector('.header')
+		const footer = document.querySelector('.footer')
+
+		if (header) {
+			console.log('yes header')
+			header.classList.add('header__top')
+			footer.style.fontSize='10px'
+			let styleHeader = header.classList
+			console.log(styleHeader)
+		} else  {
+			console.log('no header')
+		}
+		const div = document.querySelectorAll('div')
+		let i = 1++
+		div.forEach(item => {
+			if (i <= 4) {
+				item.classList.add(i)
+			}
+		});
+
+
 });
 	
