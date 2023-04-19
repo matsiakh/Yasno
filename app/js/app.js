@@ -299,11 +299,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		forms('.form');
 
-		const modalNext = document.getElementById('modal__next')
-		const modalInput = modalNext.querySelectorAll('input')
-		modalInput.forEach(item => {
-			let modalItem = item.id
-		})
-		console.log(modalItem)
+		// const modalNext = document.getElementById('modal__next')
+		// const modalInput = modalNext.querySelectorAll('input')
+		// modalInput.forEach(item => {
+		// 	let modalItem = item.id
+		// })
+		// console.log(modalItem)
+
+		let usersCounter = 0;
+		let newUsers = usersCounter++;
+		console.log(newUsers);
 
 });
