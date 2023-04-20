@@ -310,4 +310,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		let newUsers = usersCounter++;
 		console.log(newUsers);
 
+		let message = (92 > '11' && 58 < 100) ? 'Істина!' : 'Брехня!';
+		console.log(message);
+
+		if (5 == "5") {
+			console.log('Істина!');
+		} else {
+			console.log('Брехня!');
+		}
+
 });
